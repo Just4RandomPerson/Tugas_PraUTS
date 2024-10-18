@@ -1,0 +1,79 @@
+body{
+    text-decoration: none;
+    margin: 0;
+}
+
+.container-navbar{
+    display: flex;
+    flex-wrap: wrap ;
+    border: 1px solid black;      
+    width: 90rem; 
+    margin: 1em auto;
+    height: 5em;
+}
+
+#logo{  
+    width: 5em;
+    margin: auto 1em;
+}
+
+#des-web{
+    margin: auto 9em;
+}
+#search{
+    width: 32em;
+    height:3em;
+    margin: auto ;
+    margin-right: 0em;
+    
+}
+#search-bar{
+    width: 30em;
+    height: 2.5em;
+    margin: auto .5em;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.populer-rekomend{
+    border: 1px solid black;
+    width: 40em;
+    height: 75vh;
+    margin: .5em 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.title-section{
+    height: 1em;
+    text-align: center;
+}
+
+.list-lagu{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 35em;
+    margin: .5em auto;
+}
+
+.gambar-lagu{
+    border: 1px solid black;
+    width: 3.3em;
+    height: 3.3em;
+}
+
+.judul-lagu{
+    margin: auto;
+}
+
+.list-lagu a{
+    margin: auto 1em;
+}
+
