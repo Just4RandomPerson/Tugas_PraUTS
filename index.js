@@ -37,6 +37,8 @@ getData().then(() => {
 // Export idartist after all requests are done
 export { idartist };
 
+// audio ketika yang lain di play maka yang sebelumnya stop
+
 document.addEventListener('play', function(e){  
     var audios = document.getElementsByTagName('audio');  
     for(var i = 0, len = audios.length; i < len;i++){  
