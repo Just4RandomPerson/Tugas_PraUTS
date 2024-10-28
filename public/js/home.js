@@ -1,1 +1,3 @@
-alert('a')
+feather.replace();
+
+console.log("ok")

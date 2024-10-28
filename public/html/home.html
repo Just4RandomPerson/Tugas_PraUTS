@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Music Genres</title>
 
     <!-- feather icons -->
@@ -16,62 +16,84 @@
     <header>
         <div class="container-navbar">
             <h1 id="logo">MusicVerse</h1>
-            <h2 id="des-web">Explore Your Favorite Genres</h2>
-            <div id="search">
-                <input type="text" name="search" id="search-bar" placeholder="Search for music...">
-                <a href="#" id="search-btn">
-                    <i data-feather="search"></i>
-                </a>
+            <div id="search-container">
+                <div id="search-artist">
+                    <h2 class="des-web">Explore Your Favorite Artist</h2>
+                    <div class="searching">
+                        <input type="text" name="search" class="search-bar" placeholder="Search for artist...">
+                        <a href="/search" class="search-btn">
+                            <i data-feather="search" class="icons"></i>
+                        </a>
+                    </div>
+                </div>
+                <div id="search-album">
+                    <h2 class="des-web">Explore Your Favorite Album</h2>
+                    <div class="searching">
+                        <input type="text" name="search" class="search-bar" placeholder="Search for album...">
+                        <a href="/search" class="search-btn">
+                            <i data-feather="search" class="icons"></i>
+                        </a>
+                    </div>
+                </div>
+            
             </div>
         </div>
     </header>
 
     <main>
-        <section class="genre-section">
-            <h2 class="title-section">Popular Genres</h2>
-            <div class="genre-list">
-                <div class="genre-item">
-                    <h3>Pop</h3>
-                    <img src="pop-genre.jpg" alt="Pop Music" class="genre-image">
-                    <p>Discover the latest pop hits.</p>
-                    <a href="#" class="genre-link">Listen Now</a>
+        <section class="recommend">
+            <h2 class="title-section">Recommended Tracks</h2>
+            <div id="container">
+                <div class="item item-1">
+                    <img class="gambar-lagu" src="" alt="">
+                    <p class="judul-lagu">ini adalah judul lagu</p>
+                    <button type="submit" class="listen">listen</button>
                 </div>
-                <div class="genre-item">
-                    <h3>Rock</h3>
-                    <img src="rock-genre.jpg" alt="Rock Music" class="genre-image">
-                    <p>Feel the energy of rock music.</p>
-                    <a href="#" class="genre-link">Listen Now</a>
+                <div class="item item-2">
+                    <img class="gambar-lagu" src="" alt="">
+                    <p class="judul-lagu">ini adalah judul lagu</p>
+                    <button type="submit" class="listen">listen</button>
                 </div>
-                <div class="genre-item">
-                    <h3>Jazz</h3>
-                    <img src="jazz-genre.jpg" alt="Jazz Music" class="genre-image">
-                    <p>Relax with smooth jazz tunes.</p>
-                    <a href="#" class="genre-link">Listen Now</a>
+                <div class="item item-3">
+                    <img class="gambar-lagu" src="" alt="">
+                    <p class="judul-lagu">ini adalah judul lagu</p>
+                    <button type="submit" class="listen">listen</button>
                 </div>
-                <div class="genre-item">
-                    <h3>Hip-Hop</h3>
-                    <img src="hiphop-genre.jpg" alt="Hip-Hop Music" class="genre-image">
-                    <p>Vibe with the latest hip-hop tracks.</p>
-                    <a href="#" class="genre-link">Listen Now</a>
+                <div class="item item-4">
+                    <img class="gambar-lagu" src="" alt="">
+                    <p class="judul-lagu">ini adalah judul lagu</p>
+                    <button type="submit" class="listen">listen</button>
+                </div>
+                <div class="item item-5">
+                    <img class="gambar-lagu" src="" alt="">
+                    <p class="judul-lagu">ini adalah judul lagu</p>
+                    <button type="submit" class="listen">listen</button>
                 </div>
             </div>
         </section>
-
-        <section class="populer-rekomend">
-            <h2 class="title-section">Recommended Tracks</h2>
-            <div class="list-lagu">
-                <img src="#" alt="" class="gambar-lagu">
-                <p class="judul-lagu">Track Title 1</p>
-                <a href="#">
-                    <i data-feather="play"></i>
-                </a>
-            </div>
-            <div class="list-lagu">
-                <img src="#" alt="" class="gambar-lagu">
-                <p class="judul-lagu">Track Title 2</p>
-                <a href="#">
-                    <i data-feather="play"></i>
-                </a>
+        <section id="populer-artist-album">
+            <h2 class="title-section2">Populer Artist dan Album</h2>
+            <div id="artist-album">
+                <div id="container-artist">
+                    <h3>Populer Artist</h3>
+                    <div class="items">
+                        <div class="populer-artist"><p class="number">1.</p> <img class="gambar-artist" src="" alt=""><p class="nama-artist">Ini adalah nama artist</p><button class="see-more">See More</button></div>
+                        <div class="populer-artist"><p class="number">2.</p> <img class="gambar-artist" src="" alt=""><p class="nama-artist">Ini adalah nama artist</p><button class="see-more">See More</button></div>
+                        <div class="populer-artist"><p class="number">3.</p> <img class="gambar-artist" src="" alt=""><p class="nama-artist">Ini adalah nama artist</p><button class="see-more">See More</button></div>
+                        <div class="populer-artist"><p class="number">4.</p> <img class="gambar-artist" src="" alt=""><p class="nama-artist">Ini adalah nama artist</p><button class="see-more">See More</button></div>
+                        <div class="populer-artist"><p class="number">5.</p> <img class="gambar-artist" src="" alt=""><p class="nama-artist">Ini adalah nama artist</p><button class="see-more">See More</button></div>
+                    </div>
+                </div>
+                <div id="container-album">
+                    <h3>Populer Album</h3>
+                    <div class="items">
+                        <div class="populer-album"><p class="number">1.</p> <img class="gambar-album" src="" alt=""><p class="nama-album">Ini adalah nama Album</p><button type="submit" class="see-more">See More</button></div>
+                        <div class="populer-album"><p class="number">2.</p> <img class="gambar-album" src="" alt=""><p class="nama-album">Ini adalah nama Album</p><button type="submit" class="see-more">See More</button></div>
+                        <div class="populer-album"><p class="number">3.</p> <img class="gambar-album" src="" alt=""><p class="nama-album">Ini adalah nama Album</p><button type="submit" class="see-more">See More</button></div>
+                        <div class="populer-album"><p class="number">4.</p> <img class="gambar-album" src="" alt=""><p class="nama-album">Ini adalah nama Album</p><button type="submit" class="see-more">See More</button></div>
+                        <div class="populer-album"><p class="number">5.</p> <img class="gambar-album" src="" alt=""><p class="nama-album">Ini adalah nama Album</p><button type="submit" class="see-more">See More</button></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -87,13 +109,10 @@
         </div>
     </footer>
 
-    <audio controls>
-        <source src="Peterpan - Semua Tentang Kita (Official Music Video).mp3" type="audio/mpeg" >
-    </audio>
 
     <!-- feather icons -->
-    <script>
-        feather.replace();
+    <script src="/js/home.js">
+        
     </script>
 </body>
 </html>

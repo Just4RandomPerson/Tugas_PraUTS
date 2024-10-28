@@ -21,34 +21,45 @@ header {
     color: #ff4757;
 }
 
-#des-web {
+#search-container{
+    display: flex;
+}
+
+.des-web {
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-#search {
+#search-artist, #search-album {
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    flex-direction: column;
+    margin: 1em auto;
+
 }
 
-#search-bar {
+.search-bar {
     padding: 10px;
     border: none;
     border-radius: 5px;
     width: 300px;
 }
 
-#search-btn {
+.search-btn {
     background-color: #ff4757;
+    color: #282828;
     border: none;
-    padding: 10px;
+    padding: .5em;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.genre-section {
-    padding: 20px;
+.icons{
+    margin: -.2em;
+}
+
+.recommend {
+    margin-top: 30px;
 }
 
 .title-section {
@@ -58,64 +69,140 @@ header {
     color: #ff4757;
 }
 
-.genre-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+#container{
+    margin: 1em auto;
+    width: 104em;
+    height: 20em;
+    display: grid;
+    grid-template-columns: 20em 20em 20em 20em 20em;
+    grid-template-rows: 20em 20em 20em 20em 20em;
+    grid-gap: 1em;
 }
 
-.genre-item {
-    background: #444;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 15px;
-    text-align: center;
+.item{
+    border: 1px solid black;
+    border-radius: 2em;
+}
+
+.gambar-lagu{
+    display: block;
+    border: 1px solid black;
     width: 200px;
-    transition: transform 0.3s;
+    height: 200px;
+    margin: 1em auto;
 }
 
-.genre-item:hover {
-    transform: scale(1.05);
+.judul-lagu{
+    font-size: 1.5em;
+    text-align: center;
 }
 
-.genre-image {
-    width: 100%;
-    border-radius: 10px;
+.listen{
+    display: block;
+    border: 1px solid white ;
+    font-size: 2em;
+    margin: .5em auto;
+    background-color: orange;
+    color: black;
+    width: 4em;
+    border-radius: 1em;
+    box-shadow: 5px 5px;
 }
 
-.genre-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ff4757;
+.listen:hover{
+    background-color: blue;
     color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
 }
 
-.genre-link:hover {
-    background-color: #e84118;
-}
-
-.populer-rekomend {
+#populer-artist-album{
     margin-top: 30px;
 }
 
-.list-lagu {
+.title-section2{
+    margin-top: 20px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff4757;
+}
+#artist-album{
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-artist{
+    margin-left: 5em;
+    width: 45%;
+    border-top: 1px solid black;
+    
+}
+
+#container-album{
+    margin-right: 5em;
+    width: 45%;
+    border-top: 1px solid black;
+}
+
+h3{
+    text-align: center;
+    margin-top: .5em;
+    font-size: 2em;
+    color: #ff4757;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.populer-artist, .populer-album{
     border: 1px solid black;
     display: flex;
-    align-items: center;
-    margin: 15px 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 1em;
+    border-radius: 2em;
 }
 
-.gambar-lagu {
-    width: 60px;
-    height: 60px;
-    border-radius: 5px;
-    margin-right: 15px;
+.number{
+    width: 1em;
+    font-size: 1.3em;
+    position: absolute;
+    margin-top: .5em;
+    margin-left: .5em;
 }
 
+.gambar-artist, .gambar-album{
+    border: 1px solid black;
+    width: 150px;
+    height: 150px;
+    margin-left: 3em;
+
+}
+
+.nama-artist, .nama-album{
+    font-size: 1.3em;
+    margin-left:1em ;
+    margin-top: 1em;
+}
+.see-more{
+    border: 1px solid #fff;
+    position: absolute;
+    width: 7em;
+    height: 3em;
+    font-size: 1.1em;
+    border-radius: 2em;
+    margin: 5em 1em 1em 12em;
+    background-color: orange;
+    box-shadow: 5px 5px;
+}
+
+.see-more:hover{
+    background-color: blue;
+    color: #FFF;
+}
 footer {
     background-color: #282828;
     text-align: center;
@@ -123,10 +210,15 @@ footer {
     position: relative;
 }
 
+
 .socials a {
     color: #ff4757;
     margin: 0 10px;
     text-decoration: none;
+}
+
+.socials a:hover{
+    color: blue;
 }
 
 .credit {

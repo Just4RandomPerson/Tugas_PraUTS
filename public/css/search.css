@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    color: #a7a7a7;
+}
+
+#result{
+    margin: 1em auto;
+
+}
+
+h1, h2{
+    text-align: center;
+    color: #ff4757;
+}
+
+h2{
+    margin-top: 1em ;
+    color: #fff;;
+}
+#container{
+    margin: 1em auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto; /* Responsive columns */
+    justify-content: center;
+}
+
+.item{
+    border: 1px solid black;
+    border-radius: 2em;
+    margin: 1em;
+}
+
+.gambar-lagu{
+    width: 18em;
+    height: 16em;
+    border-radius: 2em;
+}
+
+.nama-lagu{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.listen{
+    display: block;
+    border: 1px solid white ;
+    font-size: 2em;
+    margin: .5em auto;
+    background-color: orange;
+    color: black;
+    width: 4em;
+    border-radius: 1em;
+    box-shadow: 5px 5px;
+}
+
+.listen:hover{
+    background-color: blue;
+    color: white;
+}

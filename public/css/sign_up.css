@@ -1,0 +1,191 @@
+:root{
+    --bg : black;
+    --font : whitesmoke;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: var(--font);
+    border: 1px solid black;
+    background-color: var(--bg);
+    position: fixed;
+}
+
+#body-login{
+    margin: 8em auto;
+    width: 70rem;
+    height: 40rem;
+    border: 1px solid var(--font);
+    border-radius: 5em;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: .2em;
+}
+
+.alert {
+    position: absolute;
+    display: block; 
+    padding: 20px;
+    background-color: #f44336; 
+    color: white;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    overflow: hidden; /* Menyembunyikan konten saat max-height 0 */
+    max-height: 0; /* Awalnya set max-height ke 0 agar alert tertutup */
+    opacity: 0; /* Awalnya atur opacity ke 0 agar alert transparan */
+    transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out; 
+    /* Atur transisi untuk opacity dan max-height */
+}
+
+#alertBoxS{
+    background-color: #30FF00;
+}
+
+.alert.show { /* Tambahkan kelas baru untuk menampilkan alert */
+    max-height: 500px; /* Atur max-height ke nilai yang cukup besar */
+    opacity: 1; /* Atur opacity ke 1 agar alert terlihat */
+}
+
+.closebtn { /* Gaya tombol tutup tetap sama */
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+#float {
+    background-color: transparent;
+    border: 1px solid var(--font);
+    border-radius: 2em;
+    width: 40em; /* Tetap lebar */
+    height: 3em; /* Tetap tinggi */
+    position: absolute;
+    top: 11%; /* Mengatur posisi dari atas secara persentase */
+    left: 50%; /* Mengatur posisi dari kiri secara persentase */
+    transform: translate(-50%, -50%); /* Menyeimbangkan posisi elemen */
+}
+
+
+#block{
+    height: 100%;
+    display: flex;
+}
+
+.login-sign{
+    width: 100%;
+}
+
+.login-sign p{
+    font-size: 2em;
+    height: 100%;
+    text-align: center;
+    color: var(--font);
+}
+
+.login-sign p:hover{
+    border-radius: 2em;
+    background-color: var(--font);
+    color: var(--bg);
+}
+
+#split_kanan{
+    width: 50%;
+    height: 100%;
+    border-radius: 0 5em 5em 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1),black), url('/assets/DALL·E 2024-10-23 17.39.12 - A dark, artistic image that captures the feeling of music. The image should include abstract sound waves flowing through the air, with deep, moody col.webp');;
+    background-position: center;
+    background-size:cover;
+    background-blend-mode:multiply;
+    background-origin: padding-box;
+}
+
+#split_kiri{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+
+#split_kiri h1{
+    font-size: 2.4em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+#email_pass{
+    width: 80%;
+    height: 60%;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+form{
+    width: 95%;
+}
+
+#input-email{
+    border-bottom: 1px solid var(--font);
+    border-top: 1px solid var(--font); 
+}
+
+#input-pass{
+    border-bottom: 1px solid var(--font);
+    border-top: 1px solid var(--font);
+    margin-top: 3em; 
+}
+
+#confirmation{
+    border-bottom: 1px solid var(--font);
+    border-top: 1px solid var(--font);
+    margin-top: 2em;
+}
+
+label{
+    border-bottom: 1px solid var(--font);
+    font-size: 1.3em;
+    margin-left: 1.4em ;
+}
+
+input{
+    width: 27em;
+    height: 2.4em;
+    border-radius: 1em;
+    margin: 1em 1.4em;
+    padding:0 1.5em ;
+    background-color: transparent;
+    color: var(--font);
+    box-shadow: 3px 2px;
+}
+
+button{
+    width: 12em;
+    height: 3em;
+    margin: 2em 5em;
+    border-radius: 10em;
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--font);
+    box-shadow: 4px 3px;
+    font-size: 1.2em;
+}
+
+button:hover{
+    border: 2px solid blue;
+    box-shadow: 4px 3px blue;
+    color: blue;
+}
