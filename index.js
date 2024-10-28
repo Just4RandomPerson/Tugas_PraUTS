@@ -43,3 +43,46 @@ document.addEventListener('play', function(e){
         }  
     }  
 }, true);
+
+import express from "express";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+const app = express()
+const hostname = "localhost"
+const port = 3000
+
+let filename = fileURLToPath(import.meta.url)
+let dir = dirname(filename)
+
+app.use(express.static("public"))
+
+// login - home
+app.get("/login",(req,res) => {
+    res.status(200).sendFile(dir + "/public/html/login.html")
+})
+
+app.post("/home", (req,res) => {
+    res.status(200).sendFile(dir + "/public/html/home.html")
+})
+
+// sign up -login
+app.get("/", (req,res) => {
+    res.status(200).sendFile(dir + "/public/html/sign_up.html")
+})
+
+app.post("/login",(req,res) => {
+    res.status(200).sendFile(dir + "/public/html/login.html")
+})
+
+app.get("/search", (req, res) => {
+    res.status(200).sendFile(dir+ "/public/html/search.html")
+})
+
+app.get("*", (req,res) => {
+    res.status(404).sendFile(dir + "/public/html/not-found.html")
+})
+
+app.listen(port, () => {
+    console.log(`http://${hostname}:${port}`)
+})
