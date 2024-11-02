@@ -38,11 +38,10 @@ body{
     color: white;
     margin-bottom: 15px;
     border-radius: 5px;
-    overflow: hidden; /* Menyembunyikan konten saat max-height 0 */
-    max-height: 0; /* Awalnya set max-height ke 0 agar alert tertutup */
-    opacity: 0; /* Awalnya atur opacity ke 0 agar alert transparan */
+    overflow: hidden; 
+    max-height: 0; 
+    opacity: 0; 
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out; 
-    /* Atur transisi untuk opacity dan max-height */
 }
 
 #alertBoxS{
@@ -54,7 +53,7 @@ body{
     opacity: 1; /* Atur opacity ke 1 agar alert terlihat */
 }
 
-.closebtn { /* Gaya tombol tutup tetap sama */
+.closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;

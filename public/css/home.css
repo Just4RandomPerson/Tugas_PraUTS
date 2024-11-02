@@ -2,11 +2,50 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #1c1c1c, #3a3a3a);
+    color: #fff;
+}
+
+#right-menu{
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    width: 20em;
+    height: 100vh;
+    right: 0;
+}
+
+nav{
+    margin-top: 5em ;
+}
+
+.links h2{
+    margin-top: 1em;
+    padding-left: 1em;
+    color:#282828;
+}
+
+#log-out{
+    color:red;
+}
+
+#nav-bar{
+    display: block;
+    position: absolute;
+    background-color: #ff4757;
+    border-radius: .5em;
+    right: 2em;
+    top: 2em;
+    color: #282828;
+}
+
+#nav-bar:hover{
+    background-color: blue;
     color: #fff;
 }
 
@@ -17,12 +56,16 @@ header {
 }
 
 #logo {
-    font-size: 2.5em;
+    position: absolute;
+    display: block;
+    width: 100px;
     color: #ff4757;
+    left: 10em;
 }
 
 #search-container{
     display: flex;
+    margin: 1em auto;
 }
 
 .des-web {
@@ -30,14 +73,15 @@ header {
     margin: 10px 0;
 }
 
-#search-artist, #search-album {
+#search{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     margin: 1em auto;
-
 }
 
+#lagu{
+    margin-left: 1em;
+}
 .search-bar {
     padding: 10px;
     border: none;
@@ -87,6 +131,7 @@ header {
 
 .gambar-lagu{
     display: block;
+    border-radius: 100%;
     border: 1px solid black;
     width: 200px;
     height: 200px;
@@ -115,7 +160,7 @@ header {
     color: white;
 }
 
-#populer-artist-album{
+#populer-artist-lagu{
     margin-top: 30px;
 }
 
@@ -126,7 +171,7 @@ header {
     text-align: center;
     color: #ff4757;
 }
-#artist-album{
+#artist-lagu{
     display: flex;
     justify-content: space-between;
 }
@@ -138,7 +183,7 @@ header {
     
 }
 
-#container-album{
+#container-lagu{
     margin-right: 5em;
     width: 45%;
     border-top: 1px solid black;
@@ -157,13 +202,14 @@ h3{
     flex-direction: column;
 }
 
-.populer-artist, .populer-album{
+.populer-artist, .populer-lagu{
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin-top: 1em;
     border-radius: 2em;
+    padding: 1em;
 }
 
 .number{
@@ -174,19 +220,21 @@ h3{
     margin-left: .5em;
 }
 
-.gambar-artist, .gambar-album{
+.gambar-artist, .gambar-lagu-container{
     border: 1px solid black;
+    border-radius: 100%;
     width: 150px;
     height: 150px;
     margin-left: 3em;
 
 }
 
-.nama-artist, .nama-album{
+.nama-artist, .nama-lagu-container{
     font-size: 1.3em;
     margin-left:1em ;
     margin-top: 1em;
 }
+
 .see-more{
     border: 1px solid #fff;
     position: absolute;
@@ -203,6 +251,7 @@ h3{
     background-color: blue;
     color: #FFF;
 }
+
 footer {
     background-color: #282828;
     text-align: center;
