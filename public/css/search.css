@@ -182,6 +182,7 @@ h2{
 }
 
 .nama-lagu{
+    color:#fff;
     text-align: center;
     font-size: 1.2em;
 }
@@ -292,6 +293,16 @@ h2{
   .social-media a:hover {
     text-decoration: underline;
   }
+
+  #user-list {
+    color:#fff;
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+
+  .artist-header{
+    color:#fff
+  }
   
   /* Responsive Design */
   @media screen and (max-width: 600px) {
@@ -303,3 +314,4 @@ h2{
       height: 200px;
     }
   }
+
