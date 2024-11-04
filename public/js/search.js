@@ -33,14 +33,6 @@ window.addEventListener('click', (event) => {
     }
 })
 
-// ketika tombol search ditekan
-search.addEventListener('click', () => {
-    awal.style.display = 'none'
-    akhir.style.display = 'block'
-    
-})
-
-
 // untuk bagian right-menu 
 navBar.addEventListener('click', () => {
     rightMenu.style.display = 'block'
@@ -233,6 +225,19 @@ function addArtistNameEventListeners(data, artist=null) {
     }
     
 }
+
+// function Addresult() {
+//         awal.style.display = 'none'
+//         akhir.style.display = 'block'
+
+//         let result = document.getElementById('result');
+//         let h1 = document.createElement('h1');
+//         h1.textContent = 'Result';
+//         result.appendChild(h1);
+//         akhir.appendChild(result);
+
+// }
+    
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -481,28 +486,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 userList.innerHTML = '';
+                const result = document.getElementById('result');
 
                 if (followedArtists.length > 0) {
-                    let followedHeader = document.createElement('h3');
-                    followedHeader.textContent = 'Followed Artists';
-                    userList.appendChild(followedHeader);
+                    // Addresult(followedArtists);
+                    awal.style.display = 'none'
+                    akhir.style.display = 'block'
+                    let h2_f = document.createElement('h1');
+                    h2_f.id = 'Followed Artists';
+                    h2_f.textContent = 'Followed Artists';
+                    result.appendChild(h2_f);
+                    
                 }
 
                 // Display followed artists
                 followedArtists.forEach(artist => {
                     if (groupedResults[artist].length !== 0) {
-                        let artistContainer = document.createElement('div');
-                        artistContainer.className = 'artist-container';
-
-                        let artistHeader = document.createElement('h3');
+                        let artistHeader = document.createElement('h2');
                         artistHeader.textContent = artist;
-                        artistContainer.appendChild(artistHeader);
-
-                        let artistImage = document.createElement('img');
-                        artistImage.src = data_artist[artist][0]['artists'][0]['strArtistThumb'];
-                        artistImage.width = 300;
-                        artistImage.alt = artist;
-                        artistContainer.appendChild(artistImage);
+                        artistHeader.className = 'artist-header';
+                        result.appendChild(artistHeader);
 
                         let followButton = document.createElement('button');
                         const isFollowed = localStorage.getItem(`follow_${artist}`) === 'true';
@@ -512,46 +515,63 @@ document.addEventListener("DOMContentLoaded", () => {
                             localStorage.setItem(`follow_${artist}`, !currentStatus);
                             followButton.textContent = !currentStatus ? 'Unfollow' : 'Follow';
                         };
-                        artistContainer.appendChild(followButton);
+                        result.appendChild(followButton);
 
-                        userList.appendChild(artistContainer);
+                        let lagu = document.createElement('div');
+                        lagu.className = 'lagu';
+
+                        let artistContainer = document.createElement('div');
+                        artistContainer.className = 'container';
+                        
+                        lagu.appendChild(artistContainer);
+
+                        result.appendChild(lagu);
 
                         groupedResults[artist].forEach(song => {
-                            let li = document.createElement('li');
-                            li.textContent = `Song: ${song.strTrack}`;
+                            let item_lagu = document.createElement('div');
+                            item_lagu.className = 'item';
+
+                            let img = document.createElement('img');
+                            img.className = 'gambar-lagu';
+                            img.src = song.strTrackThumb || '../assets/default_photo.png';
+                            img.alt = song.strTrack;
+
+                            let p = document.createElement('p');
+                            p.className = 'nama-lagu';
+                            p.textContent = song.strTrack;
 
                             let button = document.createElement('button');
-                            button.textContent = 'Go to Song';
+                            button.className = 'listen';
+                            button.textContent = 'Listen';
                             button.onclick = () => {
-                                window.location.href = song.strMusicVid;
+                                window.open(song.strMusicVid, '_blank');
                             };
-                            li.appendChild(button);
-                            userList.appendChild(li);
+                            item_lagu.appendChild(img);
+                            item_lagu.appendChild(p);
+                            item_lagu.appendChild(button);
+                            artistContainer.appendChild(item_lagu);
                         });
                     }
                 });
 
                 // Add header for unfollowed artists if any
                 if (unfollowedArtists.length > 0) {
-                    let resultsHeader = document.createElement('h3');
-                    resultsHeader.textContent = 'Other Artists';
-                    userList.appendChild(resultsHeader);
+                    // Addresult(unfollowedArtists);
+                    awal.style.display = 'none'
+                    akhir.style.display = 'block'
+                    let h2_u = document.createElement('h1');
+                    h2_u.id = 'Unfollowed Artists';
+                    h2_u.textContent = 'Other Artists';
+                    result.appendChild(h2_u);
                 }
 
                 unfollowedArtists.forEach(artist => {
                     if (groupedResults[artist].length !== 0) {
-                        let artistContainer = document.createElement('div');
-                        artistContainer.className = 'artist-container';
-
-                        let artistHeader = document.createElement('h3');
+                        let artistHeader = document.createElement('h2');
                         artistHeader.textContent = artist;
-                        artistContainer.appendChild(artistHeader);
+                        artistHeader.className = 'artist-header';
+                        result.appendChild(artistHeader);
 
-                        let artistImage = document.createElement('img');
-                        artistImage.src = data_artist[artist][0]['artists'][0]['strArtistThumb'];
-                        artistImage.width = 300;
-                        artistImage.alt = artist;
-                        artistContainer.appendChild(artistImage);
 
                         let followButton = document.createElement('button');
                         const isFollowed = localStorage.getItem(`follow_${artist}`) === 'true';
@@ -561,27 +581,53 @@ document.addEventListener("DOMContentLoaded", () => {
                             localStorage.setItem(`follow_${artist}`, !currentStatus);
                             followButton.textContent = !currentStatus ? 'Unfollow' : 'Follow';
                         };
-                        artistContainer.appendChild(followButton);
+                        result.appendChild(followButton);
 
-                        userList.appendChild(artistContainer);
+                        let lagu = document.createElement('div');
+                        lagu.className = 'lagu';
+
+                        let artistContainer = document.createElement('div');
+                        artistContainer.className = 'container';
+                        
+                        lagu.appendChild(artistContainer);
+
+                        result.appendChild(lagu);
 
                         groupedResults[artist].forEach(song => {
-                            let li = document.createElement('li');
-                            li.textContent = `Song: ${song.strTrack}`;
+                            let item_lagu = document.createElement('div');
+                            item_lagu.className = 'item';
+
+                            let img = document.createElement('img');
+                            img.className = 'gambar-lagu';
+                            img.src = song.strTrackThumb || '../assets/default_photo.png';
+                            img.alt = song.strTrack;
+
+                            let p = document.createElement('p');
+                            p.className = 'nama-lagu';
+                            p.textContent = song.strTrack;
 
                             let button = document.createElement('button');
-                            button.textContent = 'Go to Song';
+                            button.className = 'listen';
+                            button.textContent = 'Listen';
                             button.onclick = () => {
-                                window.location.href = song.strMusicVid;
+                                window.open(song.strMusicVid, '_blank');
                             };
-                            li.appendChild(button);
-                            userList.appendChild(li);
+                            item_lagu.appendChild(img);
+                            item_lagu.appendChild(p);
+                            item_lagu.appendChild(button);
+                            artistContainer.appendChild(item_lagu);
                         });
+                        
                     }
                 });
 
                 if (histori.length === 0) {
                     userList.textContent = 'No results found';
+                    let h2_f = document.getElementById('Followed Artists');
+                    let h2_u = document.getElementById('Unfollowed Artists');
+                    result.removeChild(h2_f);
+                    result.removeChild(h2_u);
+                    akhir.removeChild(result);
                 }
             }})
         
