@@ -1,0 +1,158 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genres</title>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <header>
+        <div class="container-navbar">
+            <h1 id="logo"><a href="/find">MusicVerse</a></h1>
+            <h2 id="des-web">Explore Your Favorite Genres</h2>
+            <div id="search">
+                <input type="text" name="search_artist" id="search_artist" placeholder="Search for artist...">
+                <input type="text" name="search_song" id="search_song" placeholder="Search for music...">
+                <a href="#" id="search-btn">
+                    <i data-feather="search"></i>
+                </a>
+            </div>
+            <ul id="user-list"></ul>
+        </div>
+    </header>
+    <main>
+        <p id="halo"></p>
+    </main>
+
+     <script src="../js/script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="/css/search.css">
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+<body>
+    
+    <div id="nav-bar">
+        <i data-feather="menu" style="width: 60px; height: 40px;"></i>
+    </div>
+    <header>     
+        <div class="container-navbar">
+            <a href="/home"><img src="/assets/logo_musicverse.png" alt="logo" id="logo"></a>
+            <div id="search-container">
+                <div id="search">
+                    <div id="artist">
+                        <h2 class="des-web">Explore Your Favorite Artist</h2>
+                        <div class="searching">
+                            <input type="text" name="search" class="search-bar" id="search_artist" placeholder="Search for artist...">
+                        </div>
+                    </div>
+                    <div id="lagu">
+                        <h2 class="des-web">Explore Your Favorite Song</h2>
+                        <div class="searching">
+                            <input type="text" name="search" class="search-bar" id="search_song" placeholder="Search for song...">
+                            <a id="search-btn-container" href="#">
+                                <i data-feather="search" id="search-btn"></i>
+                            <a/>    
+                        </>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <ul id="user-list"></ul>
+    </header>
+
+    <main>
+        <section id="awal"></section>
+        <section id="akhir">
+            <div id="result">
+                <h1>Results</h1>
+                <h2> 1 of 50</h2>
+                <div class="lagu">
+                    <div class="container">
+                        <div class="item">
+                            <img src="/" alt="" class="gambar-lagu">
+                            <p class="nama-lagu">Nama Lagu</p>
+                            <button type="submit" class="listen">Listen</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <div id="right-menu">
+        <i data-feather="x" id="close-btn" style="color: black; position: fixed; right: 1em; top:1em; width:2em; height: 2em;"></i>
+        <nav>
+            <a href="/home" class="links">
+                <h2><i data-feather="home" style="margin-right: .5em;"></i> Home</h2>
+            </a>
+            <a href="/" class="links">
+                <h2 id="log-out"><i data-feather="log-out" style="margin-right: .5em;"></i>Logout</h2>
+            </a>
+        </nav>
+    </div>
+    <div id="modal-artist">
+        <div class="close-btn-modal">
+            <i data-feather="x" style="width: 2em; height: 2em  ;"></i>
+        </div>
+        <div id="bio-data">
+            <img src="/" alt="/" id="gambar-modal">
+            <section id="section-bio">
+                <h1 id="nama-modal">nama artist</h1>
+                <div id="description">
+                    <div id="ganti-bahasa">
+                        <p id="nama-description">Description</p>
+                        <select name="bahasa" id="bahasa">
+                            <option value="EN">EN</option>
+                            <option value="DE">DE</option>
+                            <option value="FR">FR</option>
+                            <option value="CN">CN</option>
+                            <option value="IT">IT</option>
+                            <option value="JP">JP</option>
+                            <option value="RU">RU</option>
+                            <option value="ES">ES</option>
+                            <option value="PT">PT</option>
+                            <option value="SE">SE</option>
+                            <option value="NL">NL</option>
+                            <option value="HU">HU</option>
+                            <option value="NO">NO</option>
+                            <option value="IL">IL</option>
+                            <option value="PL">PL</option>
+                        </select>
+                    </div>
+                    <p id="description-text">Ini adalah bagian dari description text
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nam magnam ad obcaecati beatae consequuntur facere eius aliquam! Ipsum dolorum praesentium, in ratione suscipit facilis voluptate beatae fugiat dicta atque!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nobis perferendis aliquam id voluptatum saepe sint quam repudiandae? Quisquam voluptas at nesciunt adipisci deleniti similique animi voluptatibus eos laboriosam recusandae!
+                    </p>
+                </div>
+                <div>
+                    <h3>Formed Year : <span id="tanggal_lahir">ini adalah tanggal lahir</span></h3>
+                </div>
+                <div id="list-lagu">
+                    <h3>List-List lagu:</h3>
+                    <!-- <a class="lagu" href=""></a> -->
+                </div>
+                <div class="socials">
+                    <a href="#" id="facebook"><i data-feather="facebook"></i></a>
+                    <a href="#" id="chrome"><i data-feather="chrome"></i></a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="/js/search.js"></script>
+</body>
+</html>

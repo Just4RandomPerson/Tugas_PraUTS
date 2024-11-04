@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Music Vue</title>
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/sign_up.js"></script>
+</head>
+<body>
+    <section id="float">
+        <div id="block">
+            <div class="login-sign">
+                <a href="/">
+                    <p>Sign Up</p>
+                </a>
+            </div>
+            <div class="login-sign">
+                <p>Login</p>
+            </div>
+        </div>
+    </section>
+    <div id="body-login">  
+        <section id="split_kiri">
+        </section>
+        <section id="split_kanan">
+            <h1>Login Music Vue</h1>
+                <form onsubmit="login(event)" method="post" id="login_form">
+                    <div id="input-email">
+                        <label for="emails">Email : </label>
+                        <input type="email" name="Email" id="emails" placeholder="Enter Your Email" required>
+                    </div>
+                    <div id="input-pass">
+                        <label for="passwords">Password : </label>
+                        <input type="password" name="Password" id="passwords" placeholder="Enter Your Password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+        </section>
+    </div>
+</body>
+</html>

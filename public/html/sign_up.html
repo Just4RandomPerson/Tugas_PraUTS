@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Music Vue</title>
+    <script src="../js/sign_up.js"></script>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/sign_up.css">
+</head>
+<body>
+    <!-- start nav login dan sign up -->
+    <section id="float">
+        <div id="block">
+            <div class="login-sign">
+                <p>Sign Up</p>
+            </div>
+            <div class="login-sign">
+                <a href="/login"><p>Login</p></a>
+                
+            </div>
+        </div>
+    </section>
+    <!-- end nav login dan sign up  -->
+
+    <!-- start bagian alert  -->
+
+     <!-- start alert ketika error  -->
+    <div id="alertBoxE" class="alert">
+        <span class="closebtn" onclick="closeAlert()"><i data-feather="x"></i></span>
+        Terjadi Kesalahan!
+    </div>
+    <!-- end alert ketika error  -->
+    <div id="alertBoxS" class="alert">
+        <span class="closebtn" onclick="closeAlert()"><i data-feather="x"></i></span>
+        Akun anda berhasil di buat silahkan login!!!
+    </div>
+    <!-- start alert ketika sukses -->
+
+    
+    <!-- end alert ketika sukses  -->
+    <div id="body-login">  
+        <section id="split_kiri">
+            <h1>Sign Up Music Vue</h1>
+                <form onsubmit="check(event)" method="post" id="email_pass">
+                    <div id="input-email">
+                        <label for="emails">Email : </label>
+                        <input type="email" name="Email" id="emails" placeholder="Enter Your Email" required>
+                    </div>
+                    <div id="input-pass">
+                        <label for="passwords">Password : </label>
+                        <input type="password" name="Password" id="passwords" placeholder="Enter Your Password" required>
+                    </div>
+                    <div id="confirmation">
+                        <label for="confirm">Password Confirmation : </label>
+                        <input type="password" name="Confirmation" id="confirm" placeholder="Enter Your Password Again" required>
+                    </div>
+                    <button type="submit" >Create</button>
+                </form>
+        </section>
+        <section id="split_kanan">
+            
+        </section>
+    </div>
+</body>
+</html>
