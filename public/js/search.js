@@ -629,10 +629,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 if (histori.length === 0) {
                     userList.textContent = 'No results found';
-                    let h2_f = document.getElementById('Followed Artists');
-                    let h2_u = document.getElementById('Unfollowed Artists');
-                    result.removeChild(h2_f);
-                    result.removeChild(h2_u);
                     akhir.removeChild(result);
                 }
             }})
