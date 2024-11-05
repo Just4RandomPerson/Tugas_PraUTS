@@ -341,6 +341,18 @@ document.addEventListener("DOMContentLoaded", () => {
                         perkenalanDiv.appendChild(artistImg);
                         perkenalanDiv.appendChild(artistName);
 
+                        let followButton = document.createElement('img');
+                        followButton.className = 'followBtn-artist'
+                        const isFollowed = localStorage.getItem(`follow_${user.nama_artist}`) === 'true';
+                        followButton.src = isFollowed ? '/assets/user-minus.svg' : '/assets/user-plus.svg';
+                        followButton.onclick = () => {
+                            const currentStatus = localStorage.getItem(`follow_${user.nama_artist}`) === 'true';
+                            localStorage.setItem(`follow_${user.nama_artist}`, !currentStatus);
+                            followButton.src = !currentStatus ? '/assets/user-minus.svg' : '/assets/user-plus.svg';
+                        };
+                        perkenalanDiv.appendChild(followButton);
+                
+
                         // // Create the container div
                         // const containerDiv = document.createElement('div');
                         // containerDiv.className = 'container';
@@ -410,16 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         // };
                         // artistContainer.appendChild(button);
 
-                        // let followButton = document.createElement('button');
-                        // const isFollowed = localStorage.getItem(`follow_${user.nama_artist}`) === 'true';
-                        // followButton.textContent = isFollowed ? 'Unfollow' : 'Follow';
-                        // followButton.onclick = () => {
-                        //     const currentStatus = localStorage.getItem(`follow_${user.nama_artist}`) === 'true';
-                        //     localStorage.setItem(`follow_${user.nama_artist}`, !currentStatus);
-                        //     followButton.textContent = !currentStatus ? 'Unfollow' : 'Follow';
-                        // };
-                        // artistContainer.appendChild(followButton);
-                
+                        
                         // userList.appendChild(artistContainer);
                         // }}})
                         // throw new Error('Ignore this error');
@@ -502,23 +505,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Display followed artists
                 followedArtists.forEach(artist => {
                     if (groupedResults[artist].length !== 0) {
+                        let lagu = document.createElement('div');
+                        lagu.className = 'lagu';
                         let artistHeader = document.createElement('h2');
                         artistHeader.textContent = artist;
                         artistHeader.className = 'artist-header';
-                        result.appendChild(artistHeader);
+                        lagu.appendChild(artistHeader); //2
 
-                        let followButton = document.createElement('button');
+                        let followButton = document.createElement('img');
+                        followButton.className = "folllowBtn";
                         const isFollowed = localStorage.getItem(`follow_${artist}`) === 'true';
-                        followButton.textContent = isFollowed ? 'Unfollow' : 'Follow';
+                        followButton.src = isFollowed ? '/assets/user-minus.svg' : '/assets/user-plus.svg';
                         followButton.onclick = () => {
                             const currentStatus = localStorage.getItem(`follow_${artist}`) === 'true';
                             localStorage.setItem(`follow_${artist}`, !currentStatus);
-                            followButton.textContent = !currentStatus ? 'Unfollow' : 'Follow';
+                            followButton.src = !currentStatus ? '/assets/user-minus.svg' : '/assets/user-plus.svg';
                         };
-                        result.appendChild(followButton);
+                        lagu.appendChild(followButton); //1
 
-                        let lagu = document.createElement('div');
-                        lagu.className = 'lagu';
 
                         let artistContainer = document.createElement('div');
                         artistContainer.className = 'container';
@@ -564,27 +568,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     h2_u.textContent = 'Other Artists';
                     result.appendChild(h2_u);
                 }
-
+                
+                // Display unfollowed Artists
                 unfollowedArtists.forEach(artist => {
                     if (groupedResults[artist].length !== 0) {
+                        let lagu = document.createElement('div');
+                        lagu.className = 'lagu';
                         let artistHeader = document.createElement('h2');
                         artistHeader.textContent = artist;
                         artistHeader.className = 'artist-header';
-                        result.appendChild(artistHeader);
-
-
-                        let followButton = document.createElement('button');
+                        lagu.appendChild(artistHeader);
+                        
+                        
+                        let followButton = document.createElement('img');
+                        followButton.className = "folllowBtn";
                         const isFollowed = localStorage.getItem(`follow_${artist}`) === 'true';
-                        followButton.textContent = isFollowed ? 'Unfollow' : 'Follow';
+                        followButton.src = isFollowed ? '/assets/user-minus.svg' : '/assets/user-plus.svg';
                         followButton.onclick = () => {
                             const currentStatus = localStorage.getItem(`follow_${artist}`) === 'true';
                             localStorage.setItem(`follow_${artist}`, !currentStatus);
-                            followButton.textContent = !currentStatus ? 'Unfollow' : 'Follow';
+                            followButton.src = !currentStatus ? '/assets/user-minus.svg' : '/assets/user-plus.svg';
                         };
-                        result.appendChild(followButton);
+                        lagu.appendChild(followButton);
 
-                        let lagu = document.createElement('div');
-                        lagu.className = 'lagu';
 
                         let artistContainer = document.createElement('div');
                         artistContainer.className = 'container';
@@ -636,5 +642,4 @@ document.addEventListener("DOMContentLoaded", () => {
             userList.textContent = 'Error fetching data. Please try again later.';
         });
     })
-
 
