@@ -1,3 +1,4 @@
+/* pengaplikasian style awal */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +6,13 @@
   text-decoration: none;
 }
 
+/* styling bagian body  */
 body{
   font-family: 'Arial', sans-serif;
   background: linear-gradient(to right, #1c1c1c, #3a3a3a);
 }
 
+/* start styling navbar menu kanan  */
 #right-menu{
   display: none;
   position: fixed;
@@ -34,7 +37,9 @@ nav{
 #log-out{
   color:red;
 }
+/* end styling navbar menu kanan  */
 
+/* styling navbar menu  */
 #nav-bar{
   display: block;
   position: absolute;
@@ -45,17 +50,20 @@ nav{
   color: #282828;
 }
 
+/* styling nav bar menu ketika cursor diatas elemen  */
 #nav-bar:hover{
   background-color: blue;
   color: #fff;
 }
 
+/* start styling header  */
 header{
   background-color: #282828;
   padding: 20px;
   text-align: center;
 }
 
+/* styling logo  */
 #logo {
   position: absolute;
   display: block;
@@ -64,25 +72,31 @@ header{
   left: 10em;
 }
 
+/* styling container search  */
 #search-container{
   display: flex;
   margin: 1em auto;
 }
 
+styling judul container search
 .des-web{
   font-size: 1.2em;
   margin: 10px 0;
 }
 
+/* styling div search  */
 #search{
   display: flex;
   flex-direction: row;
   margin: 1em auto;
 }
 
+/* styling div lagu  */
 #lagu{
   margin-left: 1em;
 }
+
+/* styling search bar  */
 .search-bar {
   padding: 10px;
   border: none;
@@ -90,6 +104,7 @@ header{
   width: 300px;
 }
 
+/* styling search button */
 #search-btn-container{
   background-color: #ff4757;
   color: #282828;
@@ -100,10 +115,15 @@ header{
   margin-left: .5em;
 }
 
+/* styling search button  */
 #search-btn{
   margin: -.2em;
 }
+/* end styling header  */
 
+/* start styling main  */
+
+/* styling section awal */
 #awal{
   width: 104em;
   display: block;
@@ -111,6 +131,7 @@ header{
   margin: 1em auto;
 }
 
+/* styling container artist dan lagu  */
 .artist, .lagu{
   width: 101em;
   margin: 1em auto;
@@ -118,6 +139,7 @@ header{
   flex-direction: column;
 }
 
+/* styling div perkenalan  untuk menampilkan pada saat tidak ada pencarian  */
 .perkenalan{
   border-bottom: 1px solid white;
   display: flex;
@@ -125,6 +147,7 @@ header{
 
 }
 
+/* styling gambar artist  */
 .gambar-artist{
   margin-left: 1em;
   margin-bottom: 1em;
@@ -135,6 +158,7 @@ header{
 
 }
 
+/* styling nama artist  */
 .artist-name{
   margin: auto 0em;
   width: 10em;
@@ -142,14 +166,17 @@ header{
   text-align: center;
 }
 
+/* styling nama artist saat di hover dan ketika diklik maka akan pindah ke modal artist */
 .artist-name:hover{
   color: blue;
 }
 
+/* styling section akhir  */
 #akhir{
   display: none;
 }
 
+/* styling div result  */
 #result{
   flex-direction: column;
   flex-wrap: wrap;
@@ -168,6 +195,7 @@ h2{
   color: #fff;;
 }
 
+/* styling container  */
 .container{
   margin: 1em auto;
   display: flex;
@@ -176,12 +204,14 @@ h2{
   margin-top: 3em;
 }
 
+/* styling item hasil pencarian  */
 .item{
   border: 1px solid black;
   border-radius: 2em;
   margin: 1em auto;
 }
 
+/* styling gambar lagu  */
 .gambar-lagu{
   width: 18em;
   height: 16em;
@@ -190,12 +220,14 @@ h2{
   margin: 0em auto;
 }
 
+/* styling nama lagu  */
 .nama-lagu{
   color:#fff;
   font-size: 1.2em;
   text-align: center;
 }
 
+/* styling button listen  */
 .listen{
   display: block;
   border: 1px solid white ;
@@ -208,13 +240,15 @@ h2{
   box-shadow: 5px 5px;
 }
 
+styling button listen ketika cursor diatas elemen
 .listen:hover{
   background-color: blue;
   color: white;
 }
+/* end styling main  */
 
-/* 
-/* Modal Styling */
+
+/* start styling modal  */
 #modal-artist {
   display: none; /* Hidden by default */
   position: fixed;
@@ -227,6 +261,7 @@ h2{
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
+/* styling div modal artist dan icon "X"  */
 #modal-artist .close-btn-modal {
   position: relative;
   top: 10px;
@@ -235,6 +270,7 @@ h2{
   color: white;
 }
 
+/* styling div biodata  */
 #bio-data {
   background-color: #fff;
   margin: 5% auto;
@@ -245,6 +281,7 @@ h2{
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+/* styling gambar modal  */
 #gambar-modal {
   width: 100%;
   height: 300px;
@@ -253,20 +290,23 @@ h2{
   border-top-right-radius: 8px;
 }
 
-/* Section Styling */
+/* styling section bio  */
 #section-bio {
   padding: 20px;
 }
 
+/* styling nama modal  */
 #nama-modal {
   font-size: 2em;
   margin-bottom: 10px;
 }
 
+/* styling div description  */
 #description {
   margin-bottom: 20px;
 }
 
+/* styling div ganti bahasa */
 #ganti-bahasa {
   display: flex;
   justify-content: space-between;
@@ -274,44 +314,53 @@ h2{
   margin-bottom: 10px; 
 }
 
+/* styling select bahasa  */
 #bahasa {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
+/* styling description text  */
 #description-text {
   line-height: 1.6;
 }
 
+/* styling tanggal lahir, list lagu dan social media  */
 #tanggal_lahir, #list-lagu, .social-media {
   margin-bottom: 15px;
 }
 
+/* styling lagu lagu  */
 .lagu {
   margin-left: 20px; /* Indent the song names */
 }
 
-/* Social Media Styling */
+/* styling social media link  */
 .social-media a {
   color: blue;
   text-decoration: none;
 }
 
+/* styling social media ketiak cursor diatas elemen  */
 .social-media a:hover {
   text-decoration: underline;
 }
+/* end styling modal  */
 
+/* styling list history search  */
 #user-list {
   color:#fff;
   font-size: 1.2em;
   margin: 10px 0;
 }
 
+/* styling nama artist  */
 .artist-header{
   color:#fff
 }
 
+/* styling button follow untuk pencarian artist saja */
 .followBtn-artist{
   width: 3em;  
   height: 3em; 
@@ -325,12 +374,14 @@ h2{
   transition: transform 1s ease-in-out; 
 }
 
+/* styling button follow untuk pencarian artist saja ketika cursor berada diatas elemen  */
 .followBtn-artist:hover{
   transform: scale(1.1);
   background-color: blue;
   border: 2px solid white; 
 }
 
+/* styling button follow untuk pencarian lagu */
 .folllowBtn { 
   position: absolute;
   width: 3em;  
@@ -346,13 +397,14 @@ h2{
   margin-top: 3.7em;
 }
 
+/* styling button follow untuk pencarian lagu ketika cursor diatas elemen  */
 .folllowBtn:hover {
   transform: scale(1.1);
   background-color: blue;
   border: 2px solid white; /* Scale slightly on hover for visual feedback */
 }
 
-/* Responsive Design */
+/* media queries */
 @media screen and (max-width: 600px) {
   #bio-data {
     width: 90%;

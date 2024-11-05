@@ -1,8 +1,10 @@
+/* pembuat variable untuk css */
 :root{
     --bg : black;
     --font : whitesmoke;
 }
 
+/* pengaplikasian style awal */
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@
     width: 100%;
 }
 
+/* styling body  */
 body{
     font-family: 'Poppins', sans-serif;
     color: var(--font);
@@ -18,6 +21,7 @@ body{
     position: fixed;
 }
 
+/* styling body dari sign_up */
 #body-login{
     margin: 8em auto;
     width: 70rem;
@@ -30,6 +34,7 @@ body{
     padding-bottom: .2em;
 }
 
+/* start styling alert  */
 .alert {
     position: absolute;
     display: block; 
@@ -67,8 +72,9 @@ body{
 .closebtn:hover {
     color: black;
 }
+/* end styling alert  */
 
-
+/* start styling nav sign_up -login */
 #float {
     background-color: transparent;
     border: 1px solid var(--font);
@@ -103,7 +109,9 @@ body{
     background-color: var(--font);
     color: var(--bg);
 }
+/* end styling nav sign_up -login */
 
+/* styling bagian kanan form  */
 #split_kanan{
     width: 50%;
     height: 100%;
@@ -115,6 +123,7 @@ body{
     background-origin: padding-box;
 }
 
+/* start styling bagian kiri form */
 #split_kiri{
     width: 50%;
     height: 100%;
@@ -134,10 +143,12 @@ body{
     padding: 1em;
 }
 
+/* start styling form  */
 form{
     width: 95%;
 }
 
+/* start styling div inputan  */
 #input-email{
     border-bottom: 1px solid var(--font);
     border-top: 1px solid var(--font); 
@@ -154,13 +165,16 @@ form{
     border-top: 1px solid var(--font);
     margin-top: 2em;
 }
+/* end styling input bar  */
 
+/* styling label input  */
 label{
     border-bottom: 1px solid var(--font);
     font-size: 1.3em;
     margin-left: 1.4em ;
 }
 
+/* styling input bar  */
 input{
     width: 27em;
     height: 2.4em;
@@ -172,6 +186,7 @@ input{
     box-shadow: 3px 2px;
 }
 
+/* start styling button  */
 button{
     width: 12em;
     height: 3em;
@@ -184,8 +199,14 @@ button{
     font-size: 1.2em;
 }
 
+/* styling button ketika di hover( kursor didekatkan ke elemen ) */
 button:hover{
     border: 2px solid blue;
     box-shadow: 4px 3px blue;
     color: blue;
 }
+/* end styling button  */
+
+/* end styling form  */
+
+/* end styling bagian kiri form */

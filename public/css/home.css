@@ -1,3 +1,4 @@
+/* styling tampilan awal  */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,13 +6,15 @@
     text-decoration: none;
 }
 
+/* stylind body  */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to right, #1c1c1c, #3a3a3a);
     color: #fff;
 }
 
-#right-menu{
+/* start styling nav bar menu kanan  */
+#right-menu {
     display: none;
     position: fixed;
     background-color: #fff;
@@ -20,21 +23,24 @@ body {
     right: 0;
 }
 
-nav{
-    margin-top: 5em ;
+nav {
+    margin-top: 5em;
 }
 
-.links h2{
+.links h2 {
     margin-top: 1em;
     padding-left: 1em;
-    color:#282828;
+    color: #282828;
 }
 
-#log-out{
-    color:red;
+#log-out {
+    color: red;
 }
 
-#nav-bar{
+/* end styling nav bar menu kanan  */
+
+/* start styling bagian navbar menu  */
+#nav-bar {
     display: block;
     position: absolute;
     background-color: #ff4757;
@@ -44,17 +50,21 @@ nav{
     color: #282828;
 }
 
-#nav-bar:hover{
+#nav-bar:hover {
     background-color: blue;
     color: #fff;
 }
 
+/* end styling bagian navbar menu  */
+
+/* start styling header  */
 header {
     background-color: #282828;
     padding: 20px;
     text-align: center;
 }
 
+/* styling logo  */
 #logo {
     position: absolute;
     display: block;
@@ -63,25 +73,31 @@ header {
     left: 10em;
 }
 
-#search-container{
+/* styling container search  */
+#search-container {
     display: flex;
     margin: 1em auto;
 }
 
+/* styling Text "Explore Your Favorite Artist" */
 .des-web {
     font-size: 1.2em;
     margin: 10px 0;
 }
 
-#search{
+/* styling div search  */
+#search {
     display: flex;
     flex-direction: row;
     margin: 1em auto;
 }
 
-#lagu{
+/* styling div search lagu  */
+#lagu {
     margin-left: 1em;
 }
+
+/* styling search bar  */
 .search-bar {
     padding: 10px;
     border: none;
@@ -89,6 +105,7 @@ header {
     width: 300px;
 }
 
+/* styling search button  */
 .search-btn {
     background-color: #ff4757;
     color: #282828;
@@ -98,14 +115,19 @@ header {
     cursor: pointer;
 }
 
-.icons{
+/* styling icon search  */
+.icons {
     margin: -.2em;
 }
 
+/* end styling header  */
+
+/* start rekomendasi lagu  */
 .recommend {
     margin-top: 30px;
 }
 
+/* styling judul */
 .title-section {
     font-size: 2em;
     margin-bottom: 20px;
@@ -113,8 +135,8 @@ header {
     color: #ff4757;
 }
 
-
-#container{
+/* styling container rekomendasi lagu */
+#container {
     margin: 1em auto;
     width: 104em;
     height: 20em;
@@ -124,12 +146,14 @@ header {
     grid-gap: 1em;
 }
 
-.item{
+/* styling div item item  */
+.item {
     border: 1px solid black;
     border-radius: 2em;
 }
 
-.gambar-lagu{
+/* styling gambar  */
+.gambar-lagu {
     display: block;
     border-radius: 100%;
     border: 1px solid black;
@@ -138,14 +162,16 @@ header {
     margin: 1em auto;
 }
 
-.judul-lagu{
+/* styling judul lagu  */
+.judul-lagu {
     font-size: 1.5em;
     text-align: center;
 }
 
-.listen{
+/* styling button listen  */
+.listen {
     display: block;
-    border: 1px solid white ;
+    border: 1px solid white;
     font-size: 2em;
     margin: .5em auto;
     background-color: orange;
@@ -155,54 +181,66 @@ header {
     box-shadow: 5px 5px;
 }
 
-.listen:hover{
+/* styling button listen ketika cursor diatas elemen */
+.listen:hover {
     background-color: blue;
     color: white;
 }
 
-#populer-artist-lagu{
+/* end rekomendasi lagu  */
+
+/* start bagian populer artist dan populer lagu  */
+#populer-artist-lagu {
     margin-top: 30px;
 }
 
-.title-section2{
+/* styling judul  */
+.title-section2 {
     margin-top: 20px;
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
     color: #ff4757;
 }
-#artist-lagu{
+
+/* styling div artist-lagu  */
+#artist-lagu {
     display: flex;
     justify-content: space-between;
 }
 
-#container-artist{
+/* styling container artist  */
+#container-artist {
     margin-left: 5em;
     width: 45%;
     border-top: 1px solid black;
-    
+
 }
 
-#container-lagu{
+/* styling container lagu  */
+#container-lagu {
     margin-right: 5em;
     width: 45%;
     border-top: 1px solid black;
 }
 
-h3{
+/* styling elemen h3  */
+h3 {
     text-align: center;
     margin-top: .5em;
     font-size: 2em;
     color: #ff4757;
 }
 
-.items{
+/* styling div items  */
+.items {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
 
-.populer-artist, .populer-lagu{
+/* styling div populer artist dan populer lagu  */
+.populer-artist, .populer-lagu {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -212,7 +250,8 @@ h3{
     padding: 1em;
 }
 
-.number{
+/* styling text number  */
+.number {
     width: 1em;
     font-size: 1.3em;
     position: absolute;
@@ -220,7 +259,8 @@ h3{
     margin-left: .5em;
 }
 
-.gambar-artist, .gambar-lagu-container{
+/* styling gambar artist dan lagu  */
+.gambar-artist, .gambar-lagu-container {
     border: 1px solid black;
     border-radius: 100%;
     width: 150px;
@@ -229,13 +269,15 @@ h3{
 
 }
 
-.nama-artist, .nama-lagu-container{
+/* styling nama artist dan lagu  */
+.nama-artist, .nama-lagu-container {
     font-size: 1.3em;
-    margin-left:1em ;
+    margin-left: 1em;
     margin-top: 1em;
 }
 
-.see-more{
+/* styling button see more  */
+.see-more {
     border: 1px solid #fff;
     position: absolute;
     width: 7em;
@@ -247,11 +289,14 @@ h3{
     box-shadow: 5px 5px;
 }
 
-.see-more:hover{
+/* stylinf button ketika cursor diatas elemen  */
+.see-more:hover {
     background-color: blue;
     color: #FFF;
 }
+/* end bagian populer artist dan populer lagu  */
 
+/* start bagian footer  */
 footer {
     background-color: #282828;
     text-align: center;
@@ -259,24 +304,28 @@ footer {
     position: relative;
 }
 
-
+/* syling link social media  */
 .socials a {
     color: #ff4757;
     margin: 0 10px;
     text-decoration: none;
 }
 
-.socials a:hover{
+/* styling link social media ketika cursor diatas elemen  */
+.socials a:hover {
     color: blue;
 }
 
+/* styling bagian credit  */
 .credit {
     margin-top: 10px;
     color: #bbb;
 }
+/* end bagian footer  */
 
+/* styling list history  */
 #user-list {
-    color:#fff;
+    color: #fff;
     font-size: 1.2em;
     margin: 10px 0;
-  }
+}

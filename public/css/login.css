@@ -1,8 +1,10 @@
+/* pembuatan variable untuk styling */
 :root{
     --bg : black;
     --font : whitesmoke;
 }
 
+/* styling tampilan awal  */
 *{
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@
     width: 100%;
 }
 
+/* styling untuk body  */
 body{
     font-family: 'Poppins', sans-serif;
     color: var(--font);
@@ -17,7 +20,7 @@ body{
     background-color: var(--bg);
     position: fixed;
 }
-
+/* styling badan dari badan login  */
 #body-login{
     margin: 8em auto;
     width: 70rem;
@@ -29,7 +32,7 @@ body{
     flex-direction: row;
     padding-bottom: .2em;
 }
-
+/* start syling alert  */
 .alert {
     position: absolute;
     display: block; 
@@ -63,7 +66,9 @@ body{
 .closebtn:hover {
     color: black;
 }
+/* end syling alert  */
 
+/* start styling navbar login - sign_up  */
 #float {
     background-color: transparent;
     border: 1px solid var(--font);
@@ -98,7 +103,9 @@ body{
     background-color: var(--font);
     color: var(--bg);
 }
+/* end styling navbar login - sign_up  */
 
+/* styling baginan kiri form  */
 #split_kiri{
     width: 50%;
     height: 100%;
@@ -110,6 +117,7 @@ body{
     background-origin: padding-box;
 }
 
+/* start styling bagian kanan form  */
 #split_kanan{
     width: 50%;
     height: 100%;
@@ -122,6 +130,7 @@ body{
     text-align: center;
 }
 
+styling badan div form
 #email_pass{
     width: 80%;
     height: 60%;
@@ -133,24 +142,28 @@ form{
     width: 95%;
 }
 
+/* styling div email */
 #input-email{
     border-bottom: 1px solid var(--font);
     border-top: 1px solid var(--font); 
     margin-top: 2em;
 }
 
+/* styling div password */
 #input-pass{
     border-bottom: 1px solid var(--font);
     border-top: 1px solid var(--font);
     margin-top: 3em; 
 }
 
+/* styling label */
 label{
     border-bottom: 1px solid var(--font);
     font-size: 1.3em;
     margin-left: 1.4em ;
 }
 
+/* styling input bar  */
 input{
     width: 27em;
     height: 2.4em;
@@ -162,6 +175,7 @@ input{
     box-shadow: 3px 2px;
 }
 
+/* start styling button  */
 button{
     width: 12em;
     height: 3em;
@@ -174,8 +188,13 @@ button{
     font-size: 1.2em;
 }
 
+/* styling button ketika kursor di atas elemen button  */
 button:hover{
     border: 2px solid blue;
     box-shadow: 4px 3px blue;
     color: blue;
 }
+
+/* end styling button  */
+
+/* end styling bagian kanan form  */
