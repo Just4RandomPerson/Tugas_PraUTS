@@ -136,6 +136,21 @@ window.addEventListener('click', (event) => {
     }
 })
 
+twt = document.getElementById('twt');
+ig = document.getElementById('ig');
+fb = document.getElementById('fb');
+twt.addEventListener('click', () => {
+    alert('Saat ini belum ada')
+})
+
+fb.addEventListener('click', () => {
+    alert('Saat ini belum ada')
+})
+
+ig.addEventListener('click', () => {
+    alert('Saat ini belum ada')
+})
+
 document.addEventListener("DOMContentLoaded", () => {
     const searchBtn = document.getElementById('search-btn');
     const searchArtist = document.getElementById('search_artist');
