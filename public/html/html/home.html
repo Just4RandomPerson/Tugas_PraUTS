@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genres</title>
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+    <!-- start navbar menu di kanan  -->
+    <div id="right-menu">
+        <i data-feather="x" id="close-btn"
+            style="color: black; position: fixed; right: 1em; top:1em; width:2em; height: 2em;"></i>
+        <nav>
+            <a href="/find" class="links">
+                <h2><i data-feather="search" style="margin-right: .5em;"></i> Search</h2>
+            </a>
+            <a href="/" class="links">
+                <h2 id="log-out"><i data-feather="log-out" style="margin-right: .5em;"></i>Logout</h2>
+            </a>
+        </nav>
+    </div>
+    <!-- end navbar menu di kanan  -->
+
+    <!-- bagian navbar menu  -->
+    <div id="nav-bar">
+        <i data-feather="menu" style="width: 60px; height: 40px;"></i>
+    </div>
+
+    <!-- start header  -->
+    <header>
+
+        <!-- bagian menampilkan logo  -->
+        <div class="container-navbar">
+            <a href="/home"><img src="/assets/logo_musicverse.png" alt="logo" id="logo"></a>
+
+            <!-- start bagian pencarian  -->
+            <div id="search-container">
+
+                <div id="search">
+                    <!-- start bagian pencarian berdasarkan nama artist  -->
+                    <div id="artist">
+                        <h2 class="des-web">Explore Your Favorite Artist</h2>
+                        <div class="searching">
+                            <input type="text" name="search" id="search_artist" class="search-bar"
+                                placeholder="Search for artist...">
+                        </div>
+                    </div>
+                    <!-- end bagian pencarian berdasarkan nama artist  -->
+                    
+                    <!-- start bagian pencarian berdasarkan lagu  -->
+                    <div id="lagu">
+                        <h2 class="des-web">Explore Your Favorite Song</h2>
+                        <div class="searching">
+                            <input type="text" name="search" id="search_song" class="search-bar"
+                                placeholder="Search for song...">
+                            <a href="/find" class="search-btn" id="search-btn">
+                                <i data-feather="search" class="icons"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- end bagian pencarian berdasarkan lagu  -->
+
+                </div>
+            </div>
+            <!-- end bagian pencarian  -->
+
+            <!-- bagian menampilkan list history search -->
+            <ul id="user-list"></ul>
+        </div>
+
+    </header>
+    <!-- end header  -->
+
+    <!-- start main  -->
+    <main>
+        <!-- start bagian rekomendasi lagu  -->
+        <section class="recommend">
+            <h2 class="title-section">Recommended Songs</h2>
+            <!-- start bagian bagian dari container rekomendasi lagu  -->
+            <div id="container">
+                <!-- start bagian bagian dari isi item (gambar, text dan button)  -->
+                <div class="item item-1" id="recom-1">
+                    <img class="gambar-lagu" src="" alt="" id="rec-img-1">
+                    <p class="judul-lagu" id="rec-p-1">ini adalah judul lagu</p>
+                    <button type="submit" class="listen" id="rec-but-1">listen</button>
+                </div>
+                <div class="item item-2" id="recom-2">
+                    <img class="gambar-lagu" src="" alt="" id="rec-img-2">
+                    <p class="judul-lagu" id="rec-p-2">ini adalah judul lagu</p>
+                    <button type="submit" class="listen" id="rec-but-2">listen</button>
+                </div>
+                <div class="item item-3" id="recom-3">
+                    <img class="gambar-lagu" src="" alt="" id="rec-img-3">
+                    <p class="judul-lagu" id="rec-p-3">ini adalah judul lagu</p>
+                    <button type="submit" class="listen" id="rec-but-3">listen</button>
+                </div>
+                <div class="item item-4" id="recom-4">
+                    <img class="gambar-lagu" src="" alt="" id="rec-img-4">
+                    <p class="judul-lagu" id="rec-p-4">ini adalah judul lagu</p>
+                    <button type="submit" class="listen" id="rec-but-4">listen</button>
+                </div>
+                <div class="item item-5" id="recom-5">
+                    <img class="gambar-lagu" src="" alt="" id="rec-img-5">
+                    <p class="judul-lagu" id="rec-p-5">ini adalah judul lagu</p>
+                    <button type="submit" class="listen" id="rec-but-5">listen</button>
+                </div>
+                <!-- end bagian bagian dari isi item (gambar, text dan button)  -->
+                
+            </div>
+            <!-- end bagian bagian dari container rekomendasi lagu  -->
+
+        </section>
+        <!-- end bagian rekomendasi lagu  -->
+
+        <!-- start bagian populer artist dan lagu  -->
+        <section id="populer-artist-lagu">
+            <h2 class="title-section2">Popular Artist and Songs</h2>
+            <div id="artist-lagu">
+                <!-- start container artist  -->
+                <div id="container-artist">
+                    <h3>Popular Artist</h3>
+                    <!-- start bagian bagian dari items -->
+                    <div class="items">
+                        <!-- start bagian bagian dari populer artist (gamabar text dan button)  -->
+                        <div class="populer-artist">
+                            <p class="number">1.</p> <img class="gambar-artist" src="" alt="" id="art-img-1">
+                            <p class="nama-artist" id="art-p-1">Ini adalah nama artist</p><button class="see-more"
+                            id="art-but-1">See More</button>
+                        </div>
+                        <div class="populer-artist">
+                            <p class="number">2.</p> <img class="gambar-artist" src="" alt="" id="art-img-2">
+                            <p class="nama-artist" id="art-p-2">Ini adalah nama artist</p><button class="see-more"
+                            id="art-but-2">See More</button>
+                        </div>
+                        <div class="populer-artist">
+                            <p class="number">3.</p> <img class="gambar-artist" src="" alt="" id="art-img-3">
+                            <p class="nama-artist" id="art-p-3">Ini adalah nama artist</p><button class="see-more"
+                                id="art-but-3">See More</button>
+                            </div>
+                            <div class="populer-artist">
+                                <p class="number">4.</p> <img class="gambar-artist" src="" alt="" id="art-img-4">
+                                <p class="nama-artist" id="art-p-4">Ini adalah nama artist</p><button class="see-more"
+                                id="art-but-4">See More</button>
+                            </div>
+                            <div class="populer-artist">
+                                <p class="number">5.</p> <img class="gambar-artist" src="" alt="" id="art-img-5">
+                                <p class="nama-artist" id="art-p-5">Ini adalah nama artist</p><button class="see-more"
+                                id="art-but-5">See More</button>
+                            </div>
+                        <!-- end bagian bagian dari populer artist (gamabar text dan button)  -->
+                        
+                    </div>
+                    <!-- end bagian bagian dari items -->
+
+                </div>
+                <!-- end container artist  -->
+
+                <!-- start container lagu  -->
+                <div id="container-lagu">
+                    <h3>Popular Song</h3>
+                    <!-- start bagian dari items  -->
+                    <div class="items">
+                        <!-- start bagian bagian dari populer lagu (gambar, text dan button)  -->
+                        <div class="populer-lagu" id="popular-song-1">
+                            <p class="number">1.</p> <img class="gambar-lagu-container" src="" alt="" id="pop-img-1">
+                            <p class="nama-lagu-container" id="pop-p-1">Ini adalah nama Lagu</p><button type="submit"
+                            class="see-more" id="pop-but-1">See More</button>
+                        </div>
+                        <div class="populer-lagu" id="popular-song-2">
+                            <p class="number">2.</p> <img class="gambar-lagu-container" src="" alt="" id="pop-img-2">
+                            <p class="nama-lagu-container" id="pop-p-2">Ini adalah nama Lagu</p><button type="submit"
+                            class="see-more" id="pop-but-2">See More</button>
+                        </div>
+                        <div class="populer-lagu" id="popular-song-3">
+                            <p class="number">3.</p> <img class="gambar-lagu-container" src="" alt="" id="pop-img-3">
+                            <p class="nama-lagu-container" id="pop-p-3">Ini adalah nama Lagu</p><button type="submit"
+                            class="see-more" id="pop-but-3">See More</button>
+                        </div>
+                        <div class="populer-lagu" id="popular-song-4">
+                            <p class="number">4.</p> <img class="gambar-lagu-container" src="" alt="" id="pop-img-4">
+                            <p class="nama-lagu-container" id="pop-p-4">Ini adalah nama Lagu</p><button type="submit"
+                            class="see-more" id="pop-but-4">See More</button>
+                        </div>
+                        <div class="populer-lagu" id="popular-song-5">
+                            <p class="number">5.</p> <img class="gambar-lagu-container" src="" alt="" id="pop-img-5">
+                            <p class="nama-lagu-container" id="pop-p-5">Ini adalah nama Lagu</p><button type="submit"
+                            class="see-more" id="pop-but-5">See More</button>
+                        </div>
+                        <!-- end bagian bagian dari populer lagu (gambar, text dan button)  -->
+                        
+                    </div>
+                    <!-- ednd bagian dari items  -->
+
+                </div>
+                <!-- end container lagu  -->
+
+            </div>
+        </section>
+        <!-- end bagian populer artist dan lagu  -->
+
+    </main>
+    <!-- end main  -->
+    
+    <!-- start footer  -->
+    <footer>
+        <!-- start bagian bagian socials  -->
+        <div class="socials">
+            <a href="#" id="ig"><i data-feather="instagram"></i></a>
+            <a href="#" id="twt"><i data-feather="twitter"></i></a>
+            <a href="#" id="fb"><i data-feather="facebook"></i></a>
+        </div>
+        <!-- end bagian bagian socials  -->
+
+        <!-- start bagian credit  -->
+        <div class="credit">
+            <p>Created by <a href="/home">Team MusicVerse</a>. | &copy; 2024.</p>
+        </div>
+        <!-- end bagian credit  -->
+
+    </footer>
+    <!-- end footer  -->
+
+    <!-- feather icons -->
+    <script src="/js/home.js">
+
+    </script>
+</body>
+
+</html>

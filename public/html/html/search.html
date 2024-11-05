@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="/css/search.css">
+
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+</head>
+
+<body>
+    <!-- bagian nav bar menu  -->
+    <div id="nav-bar">
+        <i data-feather="menu" style="width: 60px; height: 40px;"></i>
+    </div>
+    <!-- start bagian header  -->
+    <header>
+        <div class="container-navbar">
+            <!-- bagian logo  -->
+            <a href="/home"><img src="/assets/logo_musicverse.png" alt="logo" id="logo"></a>
+            <!-- start search container  -->
+            <div id="search-container">
+                <div id="search">
+                    <!-- start search artist -->
+                    <div id="artist">
+                        <h2 class="des-web">Explore Your Favorite Artist</h2>
+                        <div class="searching">
+                            <input type="text" name="search" class="search-bar" id="search_artist"
+                                placeholder="Search for artist...">
+                        </div>
+                    </div>
+                    <!-- end search artist -->
+
+                    <!-- start search lagu -->
+                    <div id="lagu">
+                        <h2 class="des-web">Explore Your Favorite Song</h2>
+                        <div class="searching">
+                            <input type="text" name="search" class="search-bar" id="search_song"
+                                placeholder="Search for song...">
+                            <a id="search-btn-container" href="#">
+                                <i data-feather="search" id="search-btn"></i>
+                                <a />
+                                </>
+                        </div>
+                    </div>
+                    <!-- end search lagu -->
+
+                </div>
+            </div>
+            <!-- end search container  -->
+
+            <ul id="user-list"></ul>
+    </header>
+    <!-- end bagian header  -->
+
+    <!-- start bagian main -->
+    <main>
+        <!-- bagian section awal untuk tampilan sebelum ada pencarian  -->
+        <section id="awal"></section>
+
+        <!-- bagian section akhir untuk tampilan setelah ada pencarian  -->
+        <section id="akhir">
+            <div id="result">
+                <h1>Results</h1>
+            </div>
+        </section>
+    </main>
+    <!-- end bagian main -->
+
+    <!-- start bagian nav bar menu kanan  -->
+    <div id="right-menu">
+        <i data-feather="x" id="close-btn"
+            style="color: black; position: fixed; right: 1em; top:1em; width:2em; height: 2em;"></i>
+        <nav>
+            <!-- bagian link ke home  -->
+            <a href="/home" class="links">
+                <h2><i data-feather="home" style="margin-right: .5em;"></i> Home</h2>
+            </a>
+            <!-- bagian link ke halaman login -->
+            <a href="/" class="links">
+                <h2 id="log-out"><i data-feather="log-out" style="margin-right: .5em;"></i>Logout</h2>
+            </a>
+        </nav>
+    </div>
+    <!-- end bagian nav bar menu kanan  -->
+
+    <!-- start bagian modal  -->
+    <div id="modal-artist">
+        <!-- bagian icon "X"  -->
+        <div class="close-btn-modal">
+            <i data-feather="x" style="width: 2em; height: 2em  ;"></i>
+        </div>
+        <!-- start bagian biodata modal  -->
+        <div id="bio-data">
+            <!-- bagian gambar modal  -->
+            <img src="/" alt="/" id="gambar-modal">
+            <section id="section-bio">
+                <!-- bagian nama modal  -->
+                <h1 id="nama-modal">nama artist</h1>
+                <!-- start bagian descripsi  -->
+                <div id="description">
+                    <div id="ganti-bahasa">
+                        <p id="nama-description">Description</p>
+                        <!-- bagian pemilihan bahasa deskripsi  -->
+                        <select name="bahasa" id="bahasa">
+                            <option value="EN">EN</option>
+                            <option value="DE">DE</option>
+                            <option value="FR">FR</option>
+                            <option value="CN">CN</option>
+                            <option value="IT">IT</option>
+                            <option value="JP">JP</option>
+                            <option value="RU">RU</option>
+                            <option value="ES">ES</option>
+                            <option value="PT">PT</option>
+                            <option value="SE">SE</option>
+                            <option value="NL">NL</option>
+                            <option value="HU">HU</option>
+                            <option value="NO">NO</option>
+                            <option value="IL">IL</option>
+                            <option value="PL">PL</option>
+                        </select>
+                    </div>
+                    <!-- bagian dari teks deskripsi  -->
+                    <p id="description-text">Ini adalah bagian dari description text
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet nam magnam ad obcaecati beatae
+                        consequuntur facere eius aliquam! Ipsum dolorum praesentium, in ratione suscipit facilis
+                        voluptate beatae fugiat dicta atque!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nobis perferendis aliquam id
+                        voluptatum saepe sint quam repudiandae? Quisquam voluptas at nesciunt adipisci deleniti
+                        similique animi voluptatibus eos laboriosam recusandae!
+                    </p>
+                </div>
+                <!-- end bagian describsi  -->
+
+                <!-- bagian dari tanggal lahir artist  -->
+                <div>
+                    <h3>Formed Year : <span id="tanggal_lahir">ini adalah tanggal lahir</span></h3>
+                </div>
+
+                <!-- bagian list list lagu dari artist -->
+                <div id="list-lagu">
+                    <h3>List-List lagu:</h3>
+                </div>
+                <!-- bagian social media artist facebook dan chrome  -->
+                <div class="socials">
+                    <a href="#" id="facebook"><i data-feather="facebook"></i></a>
+                    <a href="#" id="chrome"><i data-feather="chrome"></i></a>
+                </div>
+            </section>
+        </div>
+        <!-- end bagian biodata modal  -->
+
+    </div>
+    <!-- end bagian modal  -->
+
+    <script src="/js/search.js"></script>
+</body>
+
+</html>
